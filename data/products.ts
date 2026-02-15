@@ -103,7 +103,7 @@ export const products: Product[] = [
   },
   {
     slug: "l-carnitine-3000",
-    image: "/images/5.png",
+    image: "/images/15.png",
     en: {
       name: "ORCA Max",
       shortDescription: " Testosterone is a powerful, science-backed performance blend designed to naturally support male vitality and athletic excellence. ",
