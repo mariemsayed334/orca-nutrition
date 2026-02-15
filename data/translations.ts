@@ -133,9 +133,10 @@ export const translations = {
         title: "Contact Information",
         address: "8A Popin Business Centre Southway Road Wembley HA9 0HF",
         phone: "+9647702359478",
+        officialaddress: "Official Distributor in Iraq Fitness city",
         phoneLabel: "Phone",
         addressLabel: "Address",
-        addressLabel2: "Official Distributor in Iraq Fitness cit",
+        addressLabel2: "official address",
       },
     },
     footer: {
