@@ -131,12 +131,11 @@ export const translations = {
       },
       info: {
         title: "Contact Information",
-        email: "info@orca-nutrition.com",
-        phone: "+44 123 456 7890",
-        address: "London, United Kingdom",
-        emailLabel: "Email",
+        address: "8A Popin Business Centre Southway Road Wembley HA9 0HF",
+        phone: "+9647702359478",
         phoneLabel: "Phone",
         addressLabel: "Address",
+        addressLabel2: "Official Distributor in Iraq Fitness cit",
       },
     },
     footer: {
