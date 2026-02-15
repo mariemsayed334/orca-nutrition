@@ -92,20 +92,7 @@ function ContactContent() {
                 {t.contact.info.title}
               </h2>
 
-              {/* Phone */}
-              <div className="flex items-start gap-4">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10">
-                  <Phone className="h-5 w-5 text-primary" />
-                </div>
-                <div>
-                  <p className="text-sm font-medium text-foreground">
-                    {t.contact.info.phoneLabel}
-                  </p>
-                  <p className="text-sm text-muted-foreground" dir="ltr">
-                    {t.contact.info.phone}
-                  </p>
-                </div>
-              </div>
+              
 
               {/* Address */}
               <div className="flex items-start gap-4">
@@ -135,6 +122,20 @@ function ContactContent() {
                     Fitness City
                   </p>
                 </div>
+                {/* Phone */}
+              <div className="flex items-start gap-4">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10">
+                  <Phone className="h-5 w-5 text-primary" />
+                </div>
+                <div>
+                  <p className="text-sm font-medium text-foreground">
+                    {t.contact.info.phoneLabel}
+                  </p>
+                  <p className="text-sm text-muted-foreground" dir="ltr">
+                    {t.contact.info.phone}
+                  </p>
+                </div>
+              </div>
               </div>
             </div>
           </div>
