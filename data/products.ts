@@ -83,7 +83,7 @@ export const products: Product[] = [
   },
   {
     slug: "cera-orca",
-    image: "/images/4.png",
+    image: "/images/14.png",
     en: {
       name: "ORCA Multivitamin ",
       shortDescription: " is a comprehensive daily supplement scientifcally formulated to support the overall health of active individuals.",
