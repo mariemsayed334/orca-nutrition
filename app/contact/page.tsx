@@ -1,11 +1,9 @@
 "use client"
 
-import React from "react"
-
-import { useState } from "react"
+import React, { useState } from "react"
 import { SiteShell } from "@/components/site-shell"
 import { useLanguage } from "@/context/language-context"
-import { Mail, Phone, MapPin, Send } from "lucide-react"
+import { Phone, MapPin, Building2, Send } from "lucide-react"
 
 function ContactContent() {
   const { t, locale, dir } = useLanguage()
@@ -44,10 +42,7 @@ function ContactContent() {
           <div className="lg:col-span-3">
             <form onSubmit={handleSubmit} className="flex flex-col gap-6">
               <div className="flex flex-col gap-2">
-                <label
-                  htmlFor="name"
-                  className="text-sm font-medium text-foreground"
-                >
+                <label htmlFor="name" className="text-sm font-medium text-foreground">
                   {t.contact.form.name}
                 </label>
                 <input
@@ -58,26 +53,9 @@ function ContactContent() {
                   className="bg-card border border-border rounded-lg px-4 py-3 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors"
                 />
               </div>
+
               <div className="flex flex-col gap-2">
-                <label
-                  htmlFor="email"
-                  className="text-sm font-medium text-foreground"
-                >
-                  {t.contact.form.email}
-                </label>
-                <input
-                  id="email"
-                  type="email"
-                  required
-                  placeholder={t.contact.form.emailPlaceholder}
-                  className="bg-card border border-border rounded-lg px-4 py-3 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors"
-                />
-              </div>
-              <div className="flex flex-col gap-2">
-                <label
-                  htmlFor="message"
-                  className="text-sm font-medium text-foreground"
-                >
+                <label htmlFor="message" className="text-sm font-medium text-foreground">
                   {t.contact.form.message}
                 </label>
                 <textarea
@@ -88,6 +66,7 @@ function ContactContent() {
                   className="bg-card border border-border rounded-lg px-4 py-3 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors resize-none"
                 />
               </div>
+
               <button
                 type="submit"
                 className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-8 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors self-start"
@@ -95,6 +74,7 @@ function ContactContent() {
                 <Send className="h-4 w-4" />
                 {t.contact.form.submit}
               </button>
+
               {submitted && (
                 <p className="text-sm text-primary font-medium">
                   {locale === "en"
@@ -111,6 +91,8 @@ function ContactContent() {
               <h2 className="text-lg font-bold text-foreground">
                 {t.contact.info.title}
               </h2>
+
+              {/* Phone */}
               <div className="flex items-start gap-4">
                 <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10">
                   <Phone className="h-5 w-5 text-primary" />
@@ -124,6 +106,8 @@ function ContactContent() {
                   </p>
                 </div>
               </div>
+
+              {/* Address */}
               <div className="flex items-start gap-4">
                 <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10">
                   <MapPin className="h-5 w-5 text-primary" />
@@ -134,6 +118,21 @@ function ContactContent() {
                   </p>
                   <p className="text-sm text-muted-foreground">
                     {t.contact.info.address}
+                  </p>
+                </div>
+              </div>
+
+              {/* Official distributor */}
+              <div className="flex items-start gap-4">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10">
+                  <Building2 className="h-5 w-5 text-primary" />
+                </div>
+                <div>
+                  <p className="text-sm font-medium text-foreground">
+                    Official distributor in Iraq
+                  </p>
+                  <p className="text-sm text-muted-foreground">
+                    Fitness City
                   </p>
                 </div>
               </div>
