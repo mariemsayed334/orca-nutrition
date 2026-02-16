@@ -17,7 +17,7 @@ export function Footer() {
           <div>
             <div className="mx-auto max-w-7xl flex items-center justify-between px-6 py-4">
         <Link href="/" className="flex items-center">
-  <img src="/logo.png" width="50" />
+  <img src="/logo.png" width="150" />
 </Link>
 
       </div>
