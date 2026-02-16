@@ -91,9 +91,6 @@ function ContactContent() {
               <h2 className="text-lg font-bold text-foreground">
                 {t.contact.info.title}
               </h2>
-
-              
-
               {/* Address */}
               <div className="flex items-start gap-4">
                 <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10">
@@ -108,7 +105,6 @@ function ContactContent() {
                   </p>
                 </div>
               </div>
-
               {/* Official distributor */}
               <div className="flex items-start gap-4">
                 <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10">
