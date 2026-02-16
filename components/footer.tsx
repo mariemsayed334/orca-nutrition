@@ -15,12 +15,12 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <span className="text-2xl font-bold text-primary">ORCA</span>
-              <span className="text-sm font-medium text-muted-foreground tracking-widest uppercase">
-                Nutrition
-              </span>
-            </div>
+            <div className="mx-auto max-w-7xl flex items-center justify-between px-6 py-4">
+        <Link href="/" className="flex items-center">
+  <img src="/logo.jpg" width="50" />
+</Link>
+
+      </div>
             <p className="text-sm text-muted-foreground leading-relaxed max-w-xs">
               {locale === "en"
                 ? "Premium sports nutrition supplements from British manufacturers. Fuel your performance."
