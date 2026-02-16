@@ -45,7 +45,7 @@ export function Hero() {
     src="/product.jpg"
     alt=""
     width={480}
-    height={480}
+    height={550}
     priority
     unoptimized
   />
