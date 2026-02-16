@@ -19,7 +19,6 @@ export const metadata: Metadata = {
   title: "Orca Nutrition - Premium Sports Supplements",
   icons: {
     icon: "/public/images/fav.png",
-    shortcut: "/favicon.ico",
   },
   description:
     "Discover cutting-edge sports nutrition products. Premium protein, mass gainers, and supplements from British manufacturers.",

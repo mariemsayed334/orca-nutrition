@@ -4,6 +4,8 @@ import Link from "next/link"
 import { useState } from "react"
 import { useLanguage } from "@/context/language-context"
 import { Globe, Menu, X } from "lucide-react"
+import Image from "next/image";
+
 
 export function Navbar() {
   const { t, locale, toggleLocale, dir } = useLanguage()
@@ -15,12 +17,15 @@ export function Navbar() {
       className={`fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border ${locale === "ar" ? "font-arabic" : "font-sans"}`}
     >
       <div className="mx-auto max-w-7xl flex items-center justify-between px-6 py-4">
-        <Link href="/" className="flex items-center gap-2">
-          <span className="text-2xl font-bold text-primary">ORCA</span>
-          <span className="text-sm font-medium text-muted-foreground tracking-widest uppercase">
-            Nutrition
-          </span>
-        </Link>
+        <Link href="/" className="flex items-center">
+  <Image
+    src="/public/images/fav.png"
+    alt="Orca Nutrition"
+    width={150}
+    height={45}
+    priority
+  />
+</Link>
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-8">
