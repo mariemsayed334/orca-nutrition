@@ -17,16 +17,10 @@ export function Footer() {
           <div>
             <div className="mx-auto max-w-7xl flex items-center justify-between px-6 py-4">
         <Link href="/" className="flex items-center">
-  <img src="/logo.png" width="100" height="50" />
+  <img src="/logo.png" width="100"  />
 </Link>
 
-      </div>
-            <p className="text-sm text-muted-foreground leading-relaxed max-w-xs">
-              {locale === "en"
-                ? "Premium sports nutrition supplements from British manufacturers. Fuel your performance."
-                : "مكملات التغذية الرياضية الممتازة من الشركات المصنعة البريطانية. زوّد أداءك بالطاقة."}
-            </p>
-          </div>
+      
 
           {/* Quick Links */}
           <div>
