@@ -19,7 +19,7 @@ export function Navbar() {
       <div className="mx-auto max-w-7xl flex items-center justify-between px-6 py-4">
         <Link href="/" className="flex items-center">
   <Image
-    src="/images/fav.png"
+    src="/public/fav.png"
     alt="Orca Nutrition"
     width={150}
     height={45}
