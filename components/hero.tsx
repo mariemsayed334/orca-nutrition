@@ -3,6 +3,7 @@
 import Link from "next/link"
 import { useLanguage } from "@/context/language-context"
 import { ArrowRight, ArrowLeft } from "lucide-react"
+import Image from "next/image";
 
 export function Hero() {
   const { t, locale, dir } = useLanguage()
@@ -16,23 +17,40 @@ export function Hero() {
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-3xl" />
       </div>
 
-      <div className="relative mx-auto max-w-7xl px-6 py-32 md:py-44 flex flex-col items-center text-center">
-        <p className="text-primary font-semibold text-sm md:text-base tracking-widest uppercase mb-4">
-          {t.hero.subtitle}
-        </p>
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-foreground tracking-tight mb-6">
-          {t.hero.title}
-        </h1>
-        <p className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed mb-10">
-          {t.hero.description}
-        </p>
-        <Link
-          href="/products"
-          className="group inline-flex items-center gap-3 bg-primary text-primary-foreground px-8 py-4 rounded-lg text-base font-semibold hover:bg-primary/90 transition-all"
-        >
-          {t.hero.cta}
-          <Arrow className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
-        </Link>
+      <div className="relative mx-auto max-w-7xl px-6 py-32 md:py-44 flex flex-col md:flex-row items-center md:items-center text-center md:text-left gap-12">
+
+  {/* TEXT */}
+  <div className="flex-1">
+    <p className="text-primary font-semibold text-sm md:text-base tracking-widest uppercase mb-4">
+      {t.hero.subtitle}
+    </p>
+    <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-foreground tracking-tight mb-6">
+      {t.hero.title}
+    </h1>
+    <p className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed mb-10">
+      {t.hero.description}
+    </p>
+    <Link
+      href="/products"
+      className="group inline-flex items-center gap-3 bg-primary text-primary-foreground px-8 py-4 rounded-lg text-base font-semibold hover:bg-primary/90 transition-all"
+    >
+      {t.hero.cta}
+      <Arrow className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
+    </Link>
+  </div>
+
+  {/* IMAGE */}
+  <div className="flex-1 flex justify-center md:justify-end">
+    <Image
+      src="/product.jpg"
+      alt="supplements"
+      width={420}
+      height={420}
+      priority
+    />
+  </div>
+
+</div>
 
         {/* Decorative badge */}
         <div className="mt-16 flex items-center gap-6 text-muted-foreground text-sm">
@@ -51,7 +69,8 @@ export function Hero() {
             <span>{locale === "en" ? "Athletes" : "رياضي"}</span>
           </div>
         </div>
-      </div>
+      
     </section>
-  )
+      ).
+
 }
