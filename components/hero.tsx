@@ -41,13 +41,8 @@ export function Hero() {
 
   {/* IMAGE */}
   <div className="flex-1 flex justify-center md:justify-end">
-    <Image
-      src="/product.jpg"
-      alt="supplements"
-      width={420}
-      height={420}
-      priority
-    />
+    <img src="/product.jpg" width="480" />ty
+   
   </div>
 
 </div>
@@ -71,6 +66,7 @@ export function Hero() {
         </div>
       
     </section>
-      ).
-
-}
+      ) 
+    }
+  
+  
