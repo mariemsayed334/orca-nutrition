@@ -18,13 +18,8 @@ export function Navbar() {
     >
       <div className="mx-auto max-w-7xl flex items-center justify-between px-6 py-4">
         <Link href="/" className="flex items-center">
-  <Image
-    src="/logo.png"
-    alt="Orca Nutrition"
-    width={150}
-    height={45}
-    priority
-  />
+  <img src="/logo.png" width="150" />
+
 </Link>
 
         {/* Desktop Nav */}
