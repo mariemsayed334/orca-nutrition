@@ -18,7 +18,7 @@ export function Navbar() {
     >
       <div className="mx-auto max-w-7xl flex items-center justify-between px-6 py-4">
         <Link href="/" className="flex items-center">
-  <img src="/logo.jpg" width="100" />
+  <img src="/logo.jpg" width="50" />
 
 </Link>
 
