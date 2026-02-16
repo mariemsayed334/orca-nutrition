@@ -17,8 +17,7 @@ export function Hero() {
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-3xl" />
       </div>
 
-      <div className="relative mx-auto max-w-7xl px-6 py-32 md:py-44 flex flex-col md:flex-row items-center md:items-center text-center md:text-left gap-12">
-
+<div className="relative mx-auto max-w-7xl px-6 py-20 md:py-32 flex flex-col md:flex-row items-center text-center md:text-left gap-8">
   {/* TEXT */}
   <div className="flex-1">
     <p className="text-primary font-semibold text-sm md:text-base tracking-widest uppercase mb-4">
