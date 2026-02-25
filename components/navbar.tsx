@@ -35,9 +35,8 @@ export function Navbar() {
             onClick={toggleLocale}
             className="flex items-center gap-2 text-sm text-foreground hover:text-primary transition-colors"
           >
-            <Globe className="h-4 w-4" />
-            <img src={flagSrc} alt={flagAlt} className="w-5 h-5 rounded-sm" />
-            <span className="ml-1">{locale === "ar" ? "AR" : "EN"}</span>
+            
+              {t.nav.langSwitch}
           </button>
         </div>
 
