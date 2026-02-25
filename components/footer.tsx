@@ -16,11 +16,11 @@ export function Footer() {
           {/* Brand */}
           <div>
             <div className="mx-auto max-w-7xl flex items-center justify-between px-6 py-4">
-        <Link href="/" className="flex items-center">
-  <img src="/logo.png" width="100"  />
-</Link>
-
-      
+              <Link href="/" className="flex items-center">
+                <img src="/logo.png" width="100" />
+              </Link>
+            </div>
+          </div>
 
           {/* Quick Links */}
           <div>
@@ -57,31 +57,30 @@ export function Footer() {
 
           {/* Follow Us */}
           <div>
-            <h3 className="text-sm font-semibold text-foreground mb-4 uppercase tracking-wider">
-              {t.footer.followUs}
-            </h3>
-            <div className="flex flex-col gap-3">
-              <a
-                href="#"
-                className="text-sm text-muted-foreground hover:text-primary transition-colors"
-              >
-                Instagram
-              </a>
-              <a
-                href="#"
-                className="text-sm text-muted-foreground hover:text-primary transition-colors"
-              >
-                Facebook
-              </a>
-              <a
-                href="#"
-                className="text-sm text-muted-foreground hover:text-primary transition-colors"
-              >
-                Twitter / X
-              </a>
-            </div>
-          </div>
+  <h3 className="text-sm font-semibold text-foreground mb-4 uppercase tracking-wider">
+    {t.footer.followUs}
+  </h3>
+  <div className="flex flex-col gap-3">
+    <a
+      href="hhttps://orca-nutrition.com/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-sm text-muted-foreground hover:text-primary transition-colors"
+    >
+      Visit Our Website
+    </a>
+    <a
+      href="https://www.instagram.com/orcanutrition8?igsh=cHNsajVwbnNiOWxu"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-sm text-muted-foreground hover:text-primary transition-colors"
+    >
+      Instagram
+    </a>
+  </div>
+</div>
         </div>
+      
 
         <div className="mt-12 pt-8 border-t border-border text-center">
           <p className="text-sm text-muted-foreground">
