@@ -18,11 +18,10 @@ const _cairo = Cairo({
 export const metadata: Metadata = {
   title: "Orca Nutrition - Premium Sports Supplements",
   icons: {
-    icon: "/public/images/fav.png",
+    icon: "/logo.png",
   },
   description:
     "Discover cutting-edge sports nutrition products. Premium protein, mass gainers, and supplements from British manufacturers.",
-    
 }
 
 export const viewport = {
