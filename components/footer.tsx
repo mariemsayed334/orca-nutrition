@@ -62,7 +62,7 @@ export function Footer() {
   </h3>
   <div className="flex flex-col gap-3">
     <a
-      href="hhttps://orca-nutrition.com/"
+      href="https://orca-nutrition.com/"
       target="_blank"
       rel="noopener noreferrer"
       className="text-sm text-muted-foreground hover:text-primary transition-colors"
