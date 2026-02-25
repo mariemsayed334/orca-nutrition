@@ -32,12 +32,16 @@ export function Navbar() {
 
           {/* زر تبديل اللغة مع العلم */}
           <button
-            onClick={toggleLocale}
-            className="flex items-center gap-2 text-sm text-foreground hover:text-primary transition-colors"
-          >
-            
-              {t.nav.langSwitch}
-          </button>
+  onClick={toggleLocale}
+  className="flex items-center gap-2 text-sm text-foreground hover:text-primary transition-colors"
+>
+  <img
+    src={locale === "en" ? "/en.png" : "/ar.png"} // صورة العلم حسب اللغة
+    alt={locale === "en" ? "English" : "عربي"}
+    className="w-4 h-4 rounded-sm"
+  />
+  {locale === "en" ? "EN" : "عربي"}  {/* اسم اللغة */}
+</button>
         </div>
 
         {/* Mobile Toggle */}
