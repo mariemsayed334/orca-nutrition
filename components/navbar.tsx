@@ -10,7 +10,7 @@ export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false)
 
   // تحديد صورة العلم حسب اللغة
-  const flagSrc = locale === "ar" ? "/public/ar.png" : "/public/en.png"
+  const flagSrc = locale === "ar" ? "/ar.png" : "/en.png"
   const flagAlt = locale === "ar" ? "Arabic" : "English"
 
   return (
