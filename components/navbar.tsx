@@ -4,12 +4,14 @@ import Link from "next/link"
 import { useState } from "react"
 import { useLanguage } from "@/context/language-context"
 import { Globe, Menu, X } from "lucide-react"
-import Image from "next/image";
-
 
 export function Navbar() {
   const { t, locale, toggleLocale, dir } = useLanguage()
   const [mobileOpen, setMobileOpen] = useState(false)
+
+  // تحديد صورة العلم حسب اللغة
+  const flagSrc = locale === "ar" ? "/flags/ar.png" : "/flags/en.png"
+  const flagAlt = locale === "ar" ? "Arabic" : "English"
 
   return (
     <nav
@@ -18,42 +20,24 @@ export function Navbar() {
     >
       <div className="mx-auto max-w-7xl flex items-center justify-between px-6 py-4">
         <Link href="/" className="flex items-center">
-  <img src="/logo.jpg" width="50" />
-
-</Link>
+          <img src="/logo.jpg" width="50" alt="Logo" />
+        </Link>
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-8">
-          <Link
-            href="/"
-            className="text-sm text-foreground hover:text-primary transition-colors"
-          >
-            {t.nav.home}
-          </Link>
-          <Link
-            href="/products"
-            className="text-sm text-foreground hover:text-primary transition-colors"
-          >
-            {t.nav.products}
-          </Link>
-          <Link
-            href="/about"
-            className="text-sm text-foreground hover:text-primary transition-colors"
-          >
-            {t.nav.about}
-          </Link>
-          <Link
-            href="/contact"
-            className="text-sm text-foreground hover:text-primary transition-colors"
-          >
-            {t.nav.contact}
-          </Link>
+          <Link href="/" className="text-sm text-foreground hover:text-primary transition-colors">{t.nav.home}</Link>
+          <Link href="/products" className="text-sm text-foreground hover:text-primary transition-colors">{t.nav.products}</Link>
+          <Link href="/about" className="text-sm text-foreground hover:text-primary transition-colors">{t.nav.about}</Link>
+          <Link href="/contact" className="text-sm text-foreground hover:text-primary transition-colors">{t.nav.contact}</Link>
+
+          {/* زر تبديل اللغة مع العلم */}
           <button
             onClick={toggleLocale}
             className="flex items-center gap-2 text-sm text-foreground hover:text-primary transition-colors"
           >
             <Globe className="h-4 w-4" />
-            {t.nav.langSwitch}
+            <img src={flagSrc} alt={flagAlt} className="w-5 h-5 rounded-sm" />
+            <span className="ml-1">{locale === "ar" ? "AR" : "EN"}</span>
           </button>
         </div>
 
@@ -74,43 +58,18 @@ export function Navbar() {
           className={`md:hidden bg-background border-t border-border px-6 pb-6 ${locale === "ar" ? "font-arabic" : "font-sans"}`}
         >
           <div className="flex flex-col gap-4 pt-4">
-            <Link
-              href="/"
-              className="text-foreground hover:text-primary transition-colors"
-              onClick={() => setMobileOpen(false)}
-            >
-              {t.nav.home}
-            </Link>
-            <Link
-              href="/products"
-              className="text-foreground hover:text-primary transition-colors"
-              onClick={() => setMobileOpen(false)}
-            >
-              {t.nav.products}
-            </Link>
-            <Link
-              href="/about"
-              className="text-foreground hover:text-primary transition-colors"
-              onClick={() => setMobileOpen(false)}
-            >
-              {t.nav.about}
-            </Link>
-            <Link
-              href="/contact"
-              className="text-foreground hover:text-primary transition-colors"
-              onClick={() => setMobileOpen(false)}
-            >
-              {t.nav.contact}
-            </Link>
+            <Link href="/" className="text-foreground hover:text-primary transition-colors" onClick={() => setMobileOpen(false)}>{t.nav.home}</Link>
+            <Link href="/products" className="text-foreground hover:text-primary transition-colors" onClick={() => setMobileOpen(false)}>{t.nav.products}</Link>
+            <Link href="/about" className="text-foreground hover:text-primary transition-colors" onClick={() => setMobileOpen(false)}>{t.nav.about}</Link>
+            <Link href="/contact" className="text-foreground hover:text-primary transition-colors" onClick={() => setMobileOpen(false)}>{t.nav.contact}</Link>
+
             <button
-              onClick={() => {
-                toggleLocale()
-                setMobileOpen(false)
-              }}
+              onClick={() => { toggleLocale(); setMobileOpen(false) }}
               className="flex items-center gap-2 text-foreground hover:text-primary transition-colors"
             >
               <Globe className="h-4 w-4" />
-              {t.nav.langSwitch}
+              <img src={flagSrc} alt={flagAlt} className="w-5 h-5 rounded-sm" />
+              <span className="ml-1">{locale === "ar" ? "AR" : "EN"}</span>
             </button>
           </div>
         </div>
